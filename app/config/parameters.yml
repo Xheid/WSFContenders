@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    env(database_host): ec2-54-247-120-234.eu-west-1.compute.amazonaws.com
+    env(database_port): 5432
+    env(database_name): db9m98drj687pp
+    env(database_user): lauyeqorearyrv
+    database_password: 0ad0e2ce551901cca24c063ac7189b4cb84f4cad7dc237cbe1066a91b0f8b7cd
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: secret
+    cors_allow_origin: 'http://localhost'
+    varnish_urls: null
