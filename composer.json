@@ -18,14 +18,13 @@
     "autoload-dev": {
         "psr-4": { "Tests\\": "tests/" }
     },
-    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0",
         "api-platform/core": "^2.1",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
-        "dunglas/api-platform-heroku": "^1.0@dev",
         "guzzlehttp/guzzle": "^6.0",
+        "incenteev/composer-parameter-handler": "^2.0",
         "nelmio/cors-bundle": "^1.4",
         "phpdocumentor/reflection-docblock": "^3.0",
         "sensio/distribution-bundle": "^5.0.19",
@@ -47,10 +46,8 @@
         "symfony/phpunit-bridge": "^3.0"
     },
     "scripts": {
-        "pre-install-cmd": [
-            "Dunglas\\Heroku\\Database::createParameters"
-        ],
         "symfony-scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
@@ -73,6 +70,9 @@
         "symfony-web-dir": "web",
         "symfony-tests-dir": "tests",
         "symfony-assets-install": "hard",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
         "branch-alias": {
             "dev-master": "2.1-dev"
         }
