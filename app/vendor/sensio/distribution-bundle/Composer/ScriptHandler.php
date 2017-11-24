@@ -28,8 +28,8 @@ class ScriptHandler
      * to forthcoming listeners.
      */
     protected static $options = array(
-        'symfony-app-dir' => 'app',
-        'symfony-web-dir' => 'web',
+        'symfony-app-dir' => 'app/app',
+        'symfony-web-dir' => 'app/web',
         'symfony-assets-install' => 'hard',
         'symfony-cache-warmup' => false,
     );
