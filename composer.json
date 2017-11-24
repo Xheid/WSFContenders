@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": { "": "src/" },
-        "classmap": [ "app/app/AppKernel.php", "app/app/AppCache.php" ]
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
     "autoload-dev": {
         "psr-4": { "Tests\\": "tests/" }
@@ -62,6 +62,9 @@
         ]
     },
     "config": {
+        "platform": {
+            "php": "7.1"
+        },
         "sort-packages": true
     },
     "extra": {
@@ -72,7 +75,7 @@
         "symfony-tests-dir": "tests",
         "symfony-assets-install": "hard",
         "incenteev-parameters": {
-            "file": "app/app/config/parameters.yml"
+            "file": "app/config/parameters.yml"
         },
         "branch-alias": {
             "dev-master": "2.1-dev"

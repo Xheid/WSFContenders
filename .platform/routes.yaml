@@ -1,4 +1,7 @@
-"http://{default}/":
+"https://{default}/":
     type: upstream
-    # the first part should be your project name
-    upstream: 'wsfcontenders:php'
+    upstream: "app:http"
+
+"https://www.{default}/":
+    type: redirect
+    to: "https://{default}/"
