@@ -7,7 +7,7 @@
 name: wsfcontenders
 
 # The type of the application to build.
-type: php:7.1.9
+type: php:7.1
 build:
   flavor: composer
 
