@@ -4,7 +4,7 @@
 # in the same project.
 
 # The name of this app. Must be unique within a project.
-name: wsfContenders
+name: wsfcontenders
 
 # The type of the application to build.
 type: php:7.1.9
@@ -16,7 +16,7 @@ build:
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
-    database: 'wsfContenders:postgresql'
+    database: 'wsfcontenders:postgresql'
 
 # The configuration of app when it is exposed to the web.
 web:
