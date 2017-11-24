@@ -39,7 +39,7 @@ hooks:
     build: |
       rm app/web/app_dev.php
     deploy: |
-      bin/console --env=prod cache:clear
+      app/bin/console --env=prod cache:clear
 
 runtime:
     extensions:
