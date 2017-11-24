@@ -21,7 +21,7 @@ relationships:
 # The configuration of app when it is exposed to the web.
 web:
     # The public directory of the app, relative to its root.
-    document_root: '/web'
+    document_root: 'app/web'
     # The front-controller script to send non-static requests to.
     passthru: '/app.php'
 
@@ -30,14 +30,14 @@ disk: 2048
 
 # The mounts that will be performed when the package is deployed.
 mounts:
-    '/var/cache': 'shared:files/cache'
-    '/var/logs': 'shared:files/logs'
-    '/var/sessions': 'shared:files/sessions'
+    'app/var/cache': 'shared:files/cache'
+    'app/var/logs': 'shared:files/logs'
+    'app/var/sessions': 'shared:files/sessions'
 
 # The hooks that will be performed when the package is deployed.
 hooks:
     build: |
-      rm web/app_dev.php
+      rm app/web/app_dev.php
     deploy: |
       bin/console --env=prod cache:clear
 
